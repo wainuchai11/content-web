@@ -19,7 +19,7 @@
         <v-icon dark> mdi-account-circle </v-icon>
       </v-avatar>
 
-      <v-row align-content="center" justify="center" class="d-xs-none">
+      <v-row align-content="center" justify="center" class="d-none d-sm-flex">
         <v-btn-toggle
           v-model="toggleMenu"
           borderless
@@ -46,7 +46,7 @@
       </v-row>
       <v-spacer />
       <v-app-bar-nav-icon
-        class="d-xl-none d-lg-none d-md-none"
+        class="d-xl-none d-lg-none d-md-none d-sm-none"
         @click.stop="drawer = !drawer"
       />
     </v-app-bar>
