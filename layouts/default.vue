@@ -2,7 +2,13 @@
   <v-app>
     <v-navigation-drawer v-model="drawer" fixed>
       <v-list>
-        <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router>
+        <v-list-item
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          router
+          color="primary"
+        >
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
@@ -16,7 +22,7 @@
         color="primary"
         class="col-1"
       >
-        <v-icon dark> mdi-account-circle </v-icon>
+        <v-icon dark> mdi-folder-multiple-image </v-icon>
       </v-avatar>
 
       <v-row align-content="center" justify="center" class="d-none d-sm-flex">
@@ -95,6 +101,21 @@ export default {
       title: "Vuetify.js",
       toggleMenu: 0,
     };
+  },
+  beforeMount() {
+    this.$nextTick(() => {
+      let theme = '#50874d';
+      if (theme) {
+        console.log("theme : ", theme);
+        console.log("$vuetify", this.$vuetify);
+        this.$vuetify.theme.defaults.light.primary = theme.toUpperCase();
+        this.$vuetify.theme.themes.light.primary = theme.toUpperCase();
+        this.$vuetify.theme.themes.dark.primary = theme.toUpperCase();
+      }
+    });
+  },
+  mounted() {
+    this.$meta().refresh();
   },
 };
 </script>
