@@ -68,5 +68,6 @@ export default {
   build: {},
   generate: {
     fallback: true,
+    routes: ['/', '/service', '/news','/about-us']
   },
 };
