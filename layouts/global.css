@@ -1,9 +1,9 @@
 @font-face {
-    font-family: "Prompt";
-    src: local("Prompt"),
-     url(~assets/font/Prompt/Prompt-Regular.ttf) format("truetype");
+  font-family: "Prompt";
+  src: local("Prompt"),
+  url(~assets/font/Prompt/Prompt-Regular.ttf) format("truetype");
 }
 
 html {
-    font-family: "Prompt";
+  font-family: "Prompt", serif;
 }

@@ -5,10 +5,8 @@
     </v-col>
   </v-row>
 </template>
-  
-  <script>
-export default {
 
-};
+<script>
+export default {};
 </script>
   

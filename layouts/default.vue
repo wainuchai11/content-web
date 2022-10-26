@@ -22,7 +22,7 @@
         color="primary"
         class="col-1"
       >
-        <v-icon dark> mdi-folder-multiple-image </v-icon>
+        <v-icon dark> mdi-folder-multiple-image</v-icon>
       </v-avatar>
 
       <v-row align-content="center" justify="center" class="d-none d-sm-flex">
@@ -50,20 +50,20 @@
           </v-hover>
         </v-btn-toggle>
       </v-row>
-      <v-spacer />
+      <v-spacer/>
       <v-app-bar-nav-icon
         class="d-xl-none d-lg-none d-md-none d-sm-none"
         @click.stop="drawer = !drawer"
       />
     </v-app-bar>
     <v-main>
-      <v-container>
-        <Nuxt />
+      <v-container fluid>
+        <Nuxt/>
       </v-container>
     </v-main>
     <v-footer class="text-center pa-1" absolute app>
       <span style="width: 100%"
-        >COPYRIGHT &copy; {{ new Date().getFullYear() }}</span
+      >COPYRIGHT &copy; {{ new Date().getFullYear() }}</span
       >
     </v-footer>
   </v-app>
@@ -122,5 +122,9 @@ export default {
 <style scoped>
 .v-btn-toggle {
   background-color: inherit;
+}
+
+.v-container {
+  font-family: "Prompt", serif;
 }
 </style>
